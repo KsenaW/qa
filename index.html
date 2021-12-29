@@ -35,6 +35,19 @@
 		<!-- Custom css --> 
 		<link href="css/custom.css" rel="stylesheet">
 
+		<SCRIPT  LANGUAGE="JavaScript">
+      <!--
+    function test()
+    {
+    x=prompt("Введите первое число");
+    y=prompt("Введите второе число");
+    var proiz=0;
+    proiz=x*y;
+	alert(proiz);
+    }
+      //-->
+   		 </SCRIPT>
+
 	</head>
 
 	<body class="no-trans">
@@ -107,7 +120,6 @@
 												<li class="active"><a href="#html">HTML</a></li>
 												<li><a href="#css">CSS</a></li>
 												<li><a href="#script">JavaScript</a></li>
-												<li><a href="#query">jQuery</a></li>
 												<li><a href="#bootstrap">Bootstrap</a></li>
 												<li><a href="#tags">Site elements</a></li>
 											</ul>
@@ -263,25 +275,6 @@
 			</div>
 		</div>
 		<!-- section end -->
-
-		<!-- section start -->
-		<!-- ================ -->
-
-		<!-- section end -->
-
-		<!-- section start -->
-		<!-- ================ -->
-		<!-- 	<div class="default-bg space blue">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h1 class="text-center">Let's Work Together!</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- 	section end -->
-
 		<!-- section start -->
 		<!-- ================ -->
 <div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
@@ -328,9 +321,6 @@
 						<br>
 						<h3 class="title text-center"><span>ФОРМАТ PNG</span></h3>
 						<center> <img src="images/css7.png"  width="638" height="359" alt></center>
-
-
-
 					</div>
 				</div>
 			</div>
@@ -344,10 +334,36 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h1 id="script" class="title text-center"><span>JavaScript</span></h1>
-						<h2 class="title text-center"><span>Основы JavaScript</span></h2>
+						<h2 class="title text-center"><span>Что такое JavaScript</span></h2>
+						<p>Язык программирования JavaScript придумали специально для того, чтобы создавать интерактивные сайты. Такие сайты реагируют на&nbsp;ваши действия: добавляют лайк, когда вы&nbsp;нажимаете на&nbsp;«сердечко»; загружают новые посты в&nbsp;ленту, когда вы&nbsp;доходите до&nbsp;конца страницы; показывают оповещения о&nbsp;новом сообщении или письме. Для этого и&nbsp;нужен JavaScript. Сегодня это один из&nbsp;самых популярных и&nbsp;востребованных языков программирования.</p>
+						<p>Код на&nbsp;языке JavaScript называют скриптом. Его сохраняют в&nbsp;отдельный файл с&nbsp;расширением <code>js</code> (например, <code class="nowrap">myScript.js</code> или <code class="nowrap">awesome-effects.js</code>), а&nbsp;чтобы запустить, подключают этот файл на&nbsp;страницу. В&nbsp;HTML для добавления JavaScript есть специальный тег:</p><pre><code>&lt;script src="адрес_файла"&gt;&lt;/script&gt;</code></pre><p>Скрипт обычно подключают в&nbsp;самом конце страницы, перед закрывающим тегом <code>&lt;/body&gt;</code>. Например:</p><pre><code>&lt;body&gt;
+  &lt;!-- Содержимое страницы --&gt;
 
-
-
+  <mark>&lt;script src="app.js"&gt;&lt;/script&gt;</mark>
+&lt;/body&gt;</code></pre>
+						<p>Пример скрипта который может умножать два числа:</p>
+						<code>
+						&ltscript  LANGUAGE="JavaScript"&gt
+							<br>
+    					function test()
+							<br>
+    					{
+							<br>
+    					x=prompt("Введите первое число");
+							<br>
+   						y=prompt("Введите второе число");
+							<br>
+    					var multiply=0;
+							<br>
+    					multiply=x*y;
+							<br>
+						alert(multiply);
+							<br>
+    					}
+							<br>
+						&lt/script&gt
+						</code>
+						<br><input type=button value="Выполнить" onclick=test()></br>
 
 					</div>
 				</div>
@@ -355,22 +371,6 @@
 		</div>
 			<!-- section start -->
 			<!-- ================ -->
-		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1 id="query" class="title text-center"><span>jQuery</span></h1>
-						<h2 class="title text-center"><span>Основы jQuery</span></h2>
-
-
-
-
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- section end -->
-		<!-- section end -->
 		<!-- footer start -->
 		<!-- ================ -->
 		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
@@ -378,7 +378,57 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h1 id="bootstrap" class="title text-center"><span>Bootstrap</span></h1>
-						<h2 class="title text-center"><span>Основы Bootstrap</span></h2>
+						<h2 class="title text-center"><span>Bootstrap как набор готовых элементов</span></h2>
+						<p>
+							Фреймворк Twitter Bootstrap- служит для разработки front-end интерфейсов с помощью <abbr title="" data-original-title="HyperText Markup Language">HTML</abbr>, CS, и JS. Bootstrap - это инструментарий с открытым исходным кодом. Bootstrap начал разрабатываться как внутренняя библиотека компании Twitter под названием Twitter Blueprint.
+						</p>
+
+						<p>
+							Основные инструменты Bootstrap:
+						</p>
+
+						<p>
+							Сетки — заранее заданные размеры колонок, которые можно сразу же использовать, например ширина колонки 140 px относится к классу .span2 (.col-md-2 в третьей версии фреймворка), который можно использовать в <abbr title="" data-original-title="Cascading Style Sheets">CSS</abbr>-описании документа.
+						</p>
+						<ul class=" fix-media-list-overlap">
+							<li class="level1"><div class="li"> <strong>Шаблоны</strong> — фиксированный или резиновый шаблон документа.</div>
+							</li>
+							<li class="level1"><div class="li"> <strong>Типографика</strong> — описания шрифтов, определение некоторых классов для шрифтов, таких как код, цитаты и т. п.</div>
+							</li>
+							<li class="level1"><div class="li"> <strong>Медиа</strong> — представляет некоторое управление изображениями и видео.</div>
+							</li>
+							<li class="level1"><div class="li"> <strong>Таблицы</strong> — средства оформления таблиц, вплоть до добавления функциональности сортировки.</div>
+							</li>
+							<li class="level1"><div class="li"> <strong>Формы</strong> — классы для оформления форм и некоторых событий, происходящих с ними.</div>
+							</li>
+							<li class="level1"><div class="li"> <strong>Навигация</strong> — классы оформления для табов, вкладок, страничности, меню и панели инструментов.</div>
+							</li>
+							<li class="level1"><div class="li"> <strong>Алерты</strong> — оформление диалоговых окон, подсказок и всплывающих окон.</div>
+							</li>
+						</ul>
+
+						<p>Одной из сторон Bootstrap является то, что его можно использовать исключительно как набор уже готовых элементов. Для это не требуется серьёзных знаний HTML и CSS — достаточно уметь создавать самые простые страницы и прочитать документацию. Например, для создания кнопки используется два класса, один из которых отвечает за структуру кнопки, а другой за оформление. Такой подход называется <strong>OOCSS</strong> — Object Oriented CSS или объектно-ориентированный CSS.</p>
+
+						<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Я — синяя кнопка<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+						<p>Второй подход, который используется в Bootstrap — Atomic CSS. На нём построены утилиты во фреймворке. <strong>Atomic CSS</strong> —&nbsp;подход, при котором один класс использует одно свойство.</p>
+
+						<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"d-flex bg-white"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- HTML вёрстка --&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+						<p>В этом примере тег <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code> получит два свойства:</p>
+
+						<ol>
+							<li><code class="language-plaintext highlighter-rouge">background-color: #fff;</code></li>
+							<li><code class="language-plaintext highlighter-rouge">display: flex;</code>.</li>
+						</ol>
+
+						<p>Использование утилит предполагает более углублённые знания в CSS, так как это будет похоже на использование правил. Только вместо записи в CSS-файле используются классы.</p>
+
+						<p>Компоненты и утилиты позволяют очень быстро создать проект различной сложности. Единственное, в чём вы будете ограничены — выбор дизайна. Если не заниматься переписыванием компонентов, то страница будет выглядеть в точности, как в документации. Это не минус, так как Bootstrap современный фреймворк и его дизайн не пугает при первом взгляде. Многие небольшие компании используют такой подход.</p>
 
 
 
@@ -534,6 +584,14 @@
 		<!-- JavaScript files placed at the end of the document so the pages load faster
 		================================================== -->
 		<!-- Jquery and Bootstap core js files -->
+		<script >function multiply(num1,num2) {
+		var result = num1 * num2;
+		alert(result);
+		return result;
+		}
+
+
+		</script>
 		<script type="text/javascript" src="plugins/jquery.min.js"></script>
 		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
