@@ -104,12 +104,12 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="#banner">HTML</a></li>
-												<li><a href="#about">CSS</a></li>
-												<li><a href="#sqr">Tags</a></li>
-												<li><a href="#conf">JavaScript</a></li>
-												<li><a href="#cont">jQuery</a></li>
-												<li><a href="#nva">Bootstrap</a></li>
+												<li class="active"><a href="#html">HTML</a></li>
+												<li><a href="#css">CSS</a></li>
+												<li><a href="#script">JavaScript</a></li>
+												<li><a href="#query">jQuery</a></li>
+												<li><a href="#bootstrap">Bootstrap</a></li>
+												<li><a href="#tags">Site elements</a></li>
 											</ul>
 										</div>
 
@@ -145,58 +145,119 @@
 			</div>
 		</div>
 		<!-- banner end -->
-		<script src="https://cdn101-inst271-client.phonexa.xyz/form/run.php?p=C8F8B75CFE7311EA9FC642010A72600A">
-            const form = document.getElementById("omForm");
-            form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            const { loanAmount, incomeNextDate2 } = form;
-            sendDataToApi("/my-form-api", {
-            loanAmount: loanAmount.value,
-            incomeNextDate2: incomeNextDate2.value,
-            })
-            .done(function(response) {
-            // Server has responded saying the submit was successful!
-            spixelPublicAPI.formSubmitSuccess('#omForm');
-            })
-            .fail(function(response) {
-            // Response says the submit failed.
-            spixelPublicAPI.formSubmitFailure('#omForm');
-            });
-            });
-		</script>
+
 		<!-- section start -->
 		<!-- ================ -->
 		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="about" class="title text-center"><span>HTML</span></h1>
+						<h1 id="html" class="title text-center"><span>HTML</span></h1>
+						<h2 class="title text-center"><span>Hyper Text Markup Language</span></h2>
 						<ul>
 						<li>HTML (Hyper Text Markup Language) – язык используемый для описания web-страниц</li>
 						<li>HTML не является языком программирования, он является языком разметки</li>
 						<li>HTML-документ описывает web-страницу и состоит из тегов HTML и простого текста<br>
-							<p><li></li> - стандартный тег<br />
-							<img/>- пустой тег</p>
+							<p><code>&lt;li&gt &lt;/li&gt</code> - стандартный тег<br />
+								<code>&lt;img/&gt</code>- пустой тег</p>
 							</li>
-						<li></li>
+						<li>Для создания HTML-документа можно использовать любой текстовой редактор</li>
 						</ul>
-						<p>На самом базовом уровне, когда браузеру нужен файл, размещенный на веб-сервере, браузер запрашивает его через HTTP-протокол. Когда запрос достигает нужного веб-сервера ("железо"), сервер HTTP (ПО) принимает запрос, находит&nbsp;запрашиваемый документ (если нет, то сообщает об&nbsp;ошибке <a href="/ru/docs/Web/HTTP/Status/404">404</a>)&nbsp;и отправляет обратно, также через HTTP.</p>
-						<p><center><img alt="Basic representation of a client/server connection through HTTP" src="https://mdn.mozillademos.org/files/8659/web-server.svg" style="height: 200px; width: 600px;"></center></p>
-						<p><strong>Статический веб-сервер</strong>, или стек, состоит из компьютера ("железо") с сервером HTTP (ПО). Мы называем это <span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">«</span>статикой<span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">»</span>, потому что сервер посылает размещенные файлы в браузер <span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">«</span>как есть<span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">»</span>.</p>
-						<p><strong>Динамический веб-сервер</strong> состоит из статического веб-сервера и дополнительного программного обеспечения, чаще всего <em>сервера приложения </em>и <em>базы данных</em>. Мы называем его <span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">«</span>динамическим<span style="background-color: #ffffff; color: #222222; display: inline !important; float: none; font-family: sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">»</span>, потому что сервер приложений изменяет исходные файлы перед отправкой в ваш браузер по HTTP.</p>
-						<p>Например, для получения итоговой страницы, которую вы просматриваете в браузере, сервер приложений может заполнить HTML-шаблон данными из базы данных. Такие сайты, как MDN или Википедия, состоят из тысяч веб-страниц, но они не являются реальными HTML документами —&nbsp;лишь несколько HTML-шаблонов и гигантские базы данных. Эта структура упрощает и ускоряет сопровождение веб-приложений и доставку контента.</p>		
-						<p><strong>Nginx [engine x]&nbsp;</strong>— это HTTP-сервер и обратный прокси-сервер,
-						почтовый прокси-сервер,а также TCP/UDP прокси-сервер общего назначения,
-						изначально написанный <a href="http://sysoev.ru">Игорем Сысоевым</a>.
-						Уже длительное время он обслуживает
-						серверы многих высоконагруженных российских сайтов, таких как
-<a href="http://www.yandex.ru">Яндекс</a>,
-<a href="http://mail.ru">Mail.Ru</a>,
-<a href="http://vk.com">ВКонтакте</a> и
-<a href="http://www.rambler.ru">Рамблер</a>.
-Согласно статистике Netcraft nginx обслуживал или проксировал
-<a href="https://news.netcraft.com/archives/2020/02/20/february-2020-web-server-survey.html">25.68%
-самых нагруженных сайтов в феврале 2020 года</a>. </p>		
+						<h2 class="title text-center"><span>Cоздание HTML-документа</span></h2>
+						<p>Шаги для создания простейшей web-страницы:</p>
+						<ol>
+							<li>Отрыть редактор (к примеру NotePad)</li>
+							<li>Создать новый документ, добавить контент.</li>
+							<li>Сохранить документ, определяя название файла и расширение. Обычно для HTML-документа расширение .html&nbsp;или&nbsp;.htm</li>
+							<li>Закрыть файл (не обязательно)</li>
+							<li>Можно открыть этот документ в любом Web-браузере, и он воспроизведёт текст</li>
+							<li>Результат открытия и интерпретирования браузером HTML-документа - Web-страница</li>
+						</ol>
+						<h2 class="title text-center"><span>HTML ЭЛЕМЕНТЫ</span></h2>
+						<ul>
+							<li>HTML документ определяется используя HTML-элементы</li>
+							<li>HTML-элемент состоит из стартового тега и завершающего тега</li>
+							<li>Все теги HTML начинаются с "<" (левой угловой скобки) и заканчиваются символом ">" (правой угловой скобки)</li>
+							<li>Между стартовым и завершающим тегом размещается содержимое HTML-элемента</li>
+							<li>Пример: <b>&lt;начальный_tag атрибуты</b>&gt Cодержимое <b>&lt;/завершающий_tag атрибуты&gt</b> </li>
+							<li>Некоторые HTML-элементы могут не иметь содержимое</li>
+							<li>Пример пустого элемента: тег для создания разрыва строки (<code>&lt;br&gt</code>)</li>
+							<li>Пустые элементы обычно закрываются в стартовом теге (обязательно начиная с версии XHTML)</li>
+							<li>Существуют многие HTML-элементы содержащие атрибуты или другие HTML-элементы</li>
+							<li>Атрибуты предоставляют дополнительную информацию об элементе</li>
+							<li>Атрибуты всегда указаны в начальном теге</li>
+						</ul>
+						<h2 class="title text-center"><span>ОСНОВНАЯ СТРУКТУРА HTML-ДОКУМЕНТА</span></h2>
+						<p>Простейшая HTML-страница состоит как минимум из трёх тегов:</p>
+						<ul>
+							<li>Тег <code>&lt;html&gt</code> — это контейнер, в котором находится всё содержимое страницы, включая теги  и . Как правило, тег  идёт в документе вторым после доктайпа.</li>
+							<li>Тег <code>&lt;head&gt</code> предназначен для хранения элементов, цель которых — помочь браузеру в работе с данными. Содержимое этого тега не отображается напрямую.</li>
+							<li>Тег <code>&lt;body&gt</code> предназначен для хранения содержания веб-страницы (контента), отображаемого в окне браузера.</li>
+						</ul>
+						<h2 class="title text-center"><span>ДОБАВЛЕНИЯ В ОСНОВНОЙ СТРУКТУРЕ</span></h2>
+						<p>В последние версии HTML (после 4.01) в основной структуре HTML-документа было добавлено описание &lt;!DOCTYPE&gt,  перед тегом html<br><br>Это описание необходимо браузерам для правильного представления web-страницы<br>
+							<br><code>&lt;!DOCTYPE html&gt<br>
+							&lt;html&gt	<br>
+							&lt;head&gt&lt;title&gtНазвание документа&lt;/title&gt&lt;/head&gt<br>
+							&lt;body&gt<br><br>
+							Cодержание HTML-документа<br><br>
+							&lt;/body&gt<br>
+							&lt;/html&gt
+								<br><br>								</code></p>
+
+						<h2 class="title text-center"><span>Основные тэги HTML</span></h2>
+						<h2>Оформление текста</h2>
+						<p><code>&lt;i&gt;&lt;/i&gt;</code> <i>Выделяет текст курсивом.</i></p>
+						<p><code>&lt;b&gt;&lt;/b&gt;</code> <b>Делает текст полужирным.</b></p>
+						<p><code>&lt;u&gt;&lt;/u&gt;</code> <u>Подчёркивает текст.</u></p>
+						<p><code>&lt;s&gt;&lt;/s&gt;</code> <s>Зачёркивает текст.</s></p>
+						<p><code>&lt;cite&gt;&lt;/cite&gt;</code> Предназначается для оформления цитат.</p>
+						<p><code>&lt;tt&gt;&lt;/tt&gt;</code> <tt>Имитирует шрифт печатной машинки.</tt></p>
+						<p><code>&lt;code&gt;&lt;/code&gt;</code> <code>Выделяет текст шрифтом Monospace, который используется для оформления фрагментов кода.</code></p>
+						<p><code>&lt;font size=?&gt;&lt;/font&gt;</code> Определяет размер текста с помощью значений от <font size="1">1</font> до <font size="7">7</font>, которые нужно подставлять вместо вопросительного знака.</p>
+						<p><code>&lt;font color=?&gt;&lt;/font&gt;</code> Определяет цвет текста с помощью формата RRGGBB. Шестизначный код цвета так же вставляется вместо вопросительного знака.</p>
+						<h2>Организация текста</h2>
+						<p><code>&lt;h1&gt;&lt;/h1&gt;</code> Оформляет текст в виде самого большого заголовка.</p>
+						<h1>Заголовок h1</h1>
+
+						<p><code>&lt;h6&gt;&lt;/h6&gt;</code> Оформляет текст в виде самого маленького заголовка. Также можно использовать промежуточные значения 2, 3, 4, 5: чем больше цифра, тем меньше значимость заголовка в структуре текста.</p>
+						<h6>Заголовок h6</h6>
+
+						<p><code>&lt;p&gt;&lt;/p&gt;</code> Оформляет абзац.</p>
+						<p><code>&lt;p align=?&gt;</code> Выравнивает абзац нужным образом. Вместо вопросительного знака здесь можно поставить одно из четырёх значений: <code>left</code> (по левому краю), <code>right</code> (по правому краю), <code>justify</code> (по ширине) или <code>center</code> (по центру).</p>
+						<p><code>&lt;br&gt;</code> Добавляет перенос <br> строки.</p>
+						<p><code>&lt;blockquote&gt;&lt;/blockquote&gt;</code> Вставляет отступы с обеих сторон текста.</p>
+						<p><code>&lt;ol&gt;&lt;/ol&gt;</code> </p><ol>
+						</li><li>Предназначается
+					    </li><li>для
+						</li><li>нумерованных
+						</li><li>списков.</li></ol><p></p>
+						<p><code>&lt;ul&gt;&lt;/ul&gt;</code> </p><ul>
+						<li>Оформляет
+						<li>ненумерованный
+						</li><li>список.</li></ul><p></p>
+						<p><code>&lt;li&gt;</code> Сопровождает каждый пункт в списке, обозначая его цифрой или маркером — в зависимости от типа списка. </p>
+						<h2>Работа со ссылками</h2>
+						<p><code>&lt;a href="URL"&gt;ТЕКСТ&lt;/a&gt;</code> <a href="https://google.com">«Зашивает» ссылку в нужный фрагмент текста.</a> Адрес ссылки вставляется вместо «<code>URL</code>», а текст по умолчанию окрашивается в синий цвет и подчёркивается.</p>
+						<p><code>&lt;a href="URL"&gt;</code>
+							<code>&lt;img src="imgURL"&gt;&lt;/a&gt;</code> Добавляет ссылку, которая открывается при нажатии на картинку. Адрес картинки ставится вместо «<code>imgURL</code>».</p>
+						<p><code>&lt;a href="#якорь"&gt;ТЕКСТ&lt;/a&gt;</code> С помощью этого тега можно сослаться на «якорь» — определённый фрагмент внутри просматриваемой страницы. К примеру, якоря используется для быстрого перехода из оглавления к соответствующей части статьи. Вместо «<code>ТЕКСТ</code>» в первом теге необходимо поместить слово или фразу, нажав на которую, можно будет перейти в нужный участок страницы. А там, куда нужно привести читателя, необходимо добавить атрибут <code>id="якорь"</code> в любой тег. Например, по <a href="#common">этой ссылке</a> можно перейти в раздел «Основное» в начале статьи.</p>
+						<h2>Работа с графикой</h2>
+						<p><code>&lt;img src="URL"&gt;</code> Добавляет изображение. Вместо «<code>URL</code>» нужна ссылка на необходимый файл.</p>
+						<p><code>&lt;img src="URL" align=?&gt;</code> Как и в <code>&lt;p align=?&gt;</code>, этот параметр выравнивает изображение нужным образом, однако здесь применяется уже шесть значений: <code>left</code> (слева), <code>right</code> (справа) и <code>center</code> (по центру), а также <code>bottom</code> (внизу), <code>top</code> (вверху) и <code>middle</code> (посередине)</p>
+						<p><code>&lt;img src="URL" border=?&gt;</code> Создаёт рамку в виде сплошной линии вокруг изображения. Вместо вопросительного знака можно указать любое целое положительное число. Чем больше число, тем толще рамка.</p>
+						<p><code>&lt;body background="URL"&gt;</code> Атрибут <code>background</code> в теге <code>&lt;body&gt;</code> позволяет установить картинку в качестве фона страницы.</p>
+						<p><code>&lt;hr&gt;</code> Создаёт сплошную горизонтальную линию.</p>
+						<h2 class="title text-center"><span>Мета-теги</span></h2>
+						<p><strong>Мета-теги</strong> — это необязательные атрибуты, размещенные в заголовке страницы, между тегами &lt;head&gt; и &lt;/head&gt;, которые никак не отображаются браузером (за исключением содержимого тега &lt;title&gt;). <strong>Мета-теги</strong> могут содержать описание html-страницы, ключевые слова к ней, информацию об авторе, управляющие команды для браузера и поисковых роботов, а также прочую служебную информацию, не предназначенную для посетителей. <strong>Мета-теги</strong> для сайта играют очень важную роль. Их добавление в html-документ могут существенно помочь сайту в его жизни.</p>
+						<p> Всегда применяйте только те мета-теги, которые реально нужны для работы веб-сайта. Не следует загромождать область &lt;head&gt; лишними инструкциями, т.к. любая ошибка здесь может привести к печальным последствиям.</p>
+						<h3 class="title text-center"><span>Функции мета-тегов</span></h3>
+						<p>На данный момент не существует их четкой стандартизации,  однако функции мета-тегов достаточно разнообразны. Можно выделить несколько основных направлений использования мета-тегов:</p>
+						<ul>
+							<li>мета-теги могут идентифицировать авторство веб-документа, его адрес, частоту его обновлений;</li>
+							<li>мета-теги используются поисковыми роботами для индексации и создания заголовков гипертекстовых документов;</li>
+							<li>мета-теги влияют на режим отображения веб-страниц.</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -227,56 +288,49 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="sqr" class="title text-center"><span>S/Q/R</span></h1>
-					</p><a name="control"></a><center><h4>Запуск, остановка, перезагрузка конфигурации</h4></center><p>
-Чтобы запустить nginx, нужно выполнить исполняемый файл.
-Когда nginx запущен, им можно управлять, вызывая исполняемый файл с
-параметром <code>-s</code>.
-Используйте следующий синтаксис:
-</p> <blockquote class="example"><pre>nginx -s <i>сигнал</i>
-</pre></blockquote><p> 
-Где <i>сигнал</i> может быть одним из нижеследующих:
-</p> <ul class="compact">
-<li>
-<code>stop</code>&nbsp;— быстрое завершение
-</li>
-<li>
-<code>quit</code>&nbsp;— плавное завершение
-</li>
-<li>
-<code>reload</code>&nbsp;— перезагрузка конфигурационного файла
-</li>
-<li>
-<code>reopen</code>&nbsp;— переоткрытие лог-файлов
-</li>
-</ul><p> 
-Например, чтобы остановить процессы nginx с ожиданием окончания
-обслуживания текущих запросов рабочими процессами, можно выполнить
-следующую команду:
-</p> <blockquote class="example"><pre>nginx -s quit
-</pre></blockquote><p> 
-</p> <blockquote class="note">Команда должна быть выполнена под тем же
-пользователем, под которым был запущен nginx.</blockquote><p> 
-</p><p>
-Изменения, сделанные в конфигурационном файле,
-не будут применены, пока команда перезагрузить конфигурацию не будет
-вручную отправлена nginx’у или он не будет перезапущен.
-Для перезагрузки конфигурации выполните:
-</p> <blockquote class="example"><pre>nginx -s reload
-</pre></blockquote><p> 
-</p><p>
-Получив сигнал, главный процесс проверяет правильность синтаксиса нового
-конфигурационного файла и пытается применить конфигурацию, содержащуюся
-в нём.
-Если это ему удаётся, главный процесс запускает новые рабочие процессы
-и отправляет сообщения старым рабочим процессам с требованием завершиться.
-В противном случае, главный процесс откатывает изменения и продолжает
-работать со старой конфигурацией.
-Старые рабочие процессы, получив команду завершиться,
-прекращают принимать новые запросы и продолжают обслуживать текущие запросы
-до тех пор, пока все такие запросы не будут обслужены.
-После этого старые рабочие процессы завершаются.
-</p>
+						<h1 id="css" class="title text-center"><span>CSS</span></h1>
+						<h2 class="title text-center"><span>Cascading Style Sheets</span></h2>
+						<ul>
+							<li>CSS (Cascading Style Sheets) – каскадные таблицы стилей</li>
+							<li>Этот язык отвечает за внешний вид HTML-страницы</li>
+							<li>Синтаксис языка достаточно прост: он состоит из селекторов и свойств</li>
+							<li>С помощью селекторов можно сказать браузеру какие именно элементы мы хотим оформить</li>
+							<li>Свойства описывают как именно мы хотим оформить эти элементы</li>
+						</ul>
+						<h2 class="title text-center"><span>ПРИМЕР CSS ФАЙЛА</span></h2>
+						<center> <img src="images/css.png"  width="638" height="359" alt></center>
+						<br>
+						<h2 class="title text-center"><span>ВАЖНЫЕ СВОЙСТВА CSS</span></h2>
+						<br>
+						<h3 class="title text-center"><span>ГРУППИРОВАНИЕ</span></h3>
+						<center> <img src="images/css1.png"  width="638" height="359" alt></center>
+						<br>
+						<center> <img src="images/css2.png"  width="638" height="359" alt></center>
+						<br>
+						<h3 class="title text-center"><span>НАСЛЕДОВАНИЕ</span></h3>
+						<center> <img src="images/css3.png"  width="638" height="359" alt></center>
+						<br>
+						<h2 class="title text-center"><span>КЛАССЫ И ИДЕНТИФИКАТОРЫ В CSS</span></h2>
+						<center> <img src="images/css4.png"  width="638" height="359" alt></center>
+						<br>
+						<h2 class="title text-center"><span>BORDER, MARGIN, PADDING</span></h2>
+						<center> <img src="images/css5.png"  width="638" height="359" alt></center>
+						<br>
+						<h2 class="title text-center"><span>ПОДБОР ИЗОБРАЖЕНИЙ ДЛЯ САЙТА</span></h2>
+						<p>Есть два основных формата изображений, используемых для размещения на web-сайтах:</p>
+						<ul>
+							<li>В формате JPEG (.jpg), используются для:<br>фона<br>изображений, предполагающих увеличенный просмотр</li>
+							<li>В формате PNG (.png) , используются для:<br>логотипов;<br>пиктограмм;<br>изображений, не требующих увеличения.</li>
+						</ul>
+						<br>
+						<h3 class="title text-center"><span>ФОРМАТ JPEG</span></h3>
+						<center> <img src="images/css6.png"  width="638" height="359" alt></center>
+						<br>
+						<h3 class="title text-center"><span>ФОРМАТ PNG</span></h3>
+						<center> <img src="images/css7.png"  width="638" height="359" alt></center>
+
+
+
 					</div>
 				</div>
 			</div>
@@ -289,282 +343,185 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="conf" class="title text-center"><span>Nginx.conf</span></h1>
-						</p><a name="conf_structure"></a><center><h4>Структура конфигурационного файла</h4></center><p>
-Nginx состоит из модулей, которые настраиваются директивами, указанными
-в конфигурационном файле.
-Директивы делятся на простые и блочные.
-Простая директива состоит из имени и параметров, разделённых пробелами,
-и оканчивается точкой с запятой (<code>;</code>).
-Блочная директива устроена так же, как и простая директива, но
-вместо точки с запятой после имени и параметров следует набор дополнительных
-инструкций, помещённых внутри фигурных скобок
-(<code>{</code> и <code>}</code>).
-Если у блочной директивы внутри фигурных скобок можно задавать другие
-директивы, то она называется контекстом (примеры:
-<a href="ngx_core_module.html#events">events</a>,
-<a href="http/ngx_http_core_module.html#http">http</a>,
-<a href="http/ngx_http_core_module.html#server">server</a>
-и
-<a href="http/ngx_http_core_module.html#location">location</a>).
-</p><p>
-Директивы, помещённые в конфигурационном файле вне любого контекста,
-считаются находящимися в контексте
-<a href="ngx_core_module.html">main</a>.
-Директивы <code>events</code> и <code>http</code>
-располагаются в контексте <code>main</code>, <code>server</code>&nbsp;—
-в <code>http</code>, а <code>location</code>&nbsp;— в
-<code>server</code>.
-</p><p>
-Часть строки после символа <code>#</code> считается комментарием.	
-<p> Структура nginx.conf для текущей страницы.</p>
-<p><blockquote class="example"><pre>
-worker_processes  1;
+						<h1 id="script" class="title text-center"><span>JavaScript</span></h1>
+						<h2 class="title text-center"><span>Основы JavaScript</span></h2>
 
-events {
-    worker_connections  1024;
-}
-http {
-    include       mime.types;
-    default_type  application/octet-stream;
-    sendfile        on;
-    keepalive_timeout  65;
 
-    server {
-        listen       80;
-        server_name  10.1.133.200;
-	
-	location / {
-	if (-f /nginx/maintenance.file){
-	return 500; }
-	}
 
-	location /html/images/ {
-    	root /html/images;
-	}
 
-    #error_page  404              /404.html;
-    # redirect server error pages to the static page /50x.html
-    error_page 500 /50x.html;
-    location = /50x.html {
-        root   html;
-		internal;
-        }
-    }
-</pre>	
-<p> Пример конфига трейдинг сервера </p>
-<p><blockquote class="example"><pre> # worker_processes - Количество рабочих процессов задаётся в конфигурационном файле и может быть фиксированным для данной конфигурации или автоматически </p><p>  устанавливаться равным числу доступных процессорных ядер. Оптимальное значение зависит от множества факторов, включая число процессорных ядер,</p><p>  число жёстких дисков с данными и картину нагрузок. Если затрудняетесь в выборе правильного значения, можно начать с установки его равным числу процессорных</p><p>  ядер (значение “auto” пытается определить его автоматически).
-
-<p>worker_processes  4;<p/>
-<p># Управлять nginx можно с помощью сигналов. Номер главного процесса по умолчанию записывается в файл ".pid" /usr/local/nginx/logs/nginx.pid.</p>
-<p>Изменить имя этого файла можно при конфигурации сборки или же в nginx.conf директивой pid.</p>
-<p>pid logs/nginx.pid;</p>
-<p>events {</p>
-<p><code>worker_connections 768;</p></code>
-<p><code>}</p></code>
-
-<p><code>http {</p></code>
-	<p><code>sendfile on;</p></code>
-	<p><code>tcp_nopush on;</p></code>
-	<p><code>tcp_nodelay on;</p></code>
-	<p><code>keepalive_timeout 65;</p></code>
-	<p><code>types_hash_max_size 2048;</p></code>
-	<p><code>include mime.types;</p></code>
-	<p><code>default_type application/octet-stream;</p></code>
-	<p><code>access_log logs/access.log;</p></code>
-	<p><code>error_log logs/error.log;</p></code>
-	<p><code>gzip on;</p></code>
-	<p><code>include ./conf/sites-enabled/*.conf;</p></code>
-<p><code>}</p></code>
-</pre></blockquote></blockquote>
 					</div>
 				</div>
 			</div>
 		</div>
 			<!-- section start -->
 			<!-- ================ -->
-					<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="cont" class="title text-center"><span>Content Distribution</span></h1>
-						</p><a name="static"></a><center><h4>Раздача статического содержимого</h4></center><p>
-Одна из важных задач конфигурации nginx&nbsp;— раздача
-файлов, таких как изображения или статические HTML-страницы.
-Рассмотрим пример, в котором в зависимости от запроса файлы будут
-раздаваться из разных локальных каталогов: <code>/html</code>, который содержит HTML-файлы, и <code>/html/images</code>,
-содержащий файлы с изображениями.
-Для этого потребуется отредактировать конфигурационный файл и настроить блок
-<a href="http/ngx_http_core_module.html#server">server</a>
-внутри блока <a href="http/ngx_http_core_module.html#http">http</a>
-с двумя блоками <a href="http/ngx_http_core_module.html#location">location</a>.
-</p><p>
-Каталог <code>/html</code> есть по умолчанию, нужно только положить в него файл
-<code>index.html</code> с любым текстовым содержанием, а также
-поместить в каталог <code>/html/images</code> несколько
-файлов с изображениями.
-</p><p>
-Далее, откройте конфигурационный файл.
-Конфигурационный файл по умолчанию уже включает в себя несколько
-примеров блока <code>server</code>, большей частью закомментированных.
-Для нашей текущей задачи лучше закомментировать все такие блоки и удалить лишнее
-оставив следующие строки:
-</p> <blockquote class="example"><pre>http {
-    server {
-    }
-}
-</pre></blockquote><p> 
-В общем случае конфигурационный файл может содержать несколько блоков
-<code>server</code>,
-<a href="http/request_processing.html">различаемых</a> по портам, на
-которых они
-<a href="http/ngx_http_core_module.html#listen">слушают</a>,
-и по
-<a href="http/server_names.html">имени сервера</a>.
-Определив, какой <code>server</code> будет обрабатывать запрос,
-nginx сравнивает URI, указанный в заголовке запроса, с параметрами директив
-<code>location</code>, определённых внутри блока
-<code>server</code>.
-</p><p>
-В блок <code>server</code> вносим блок <code>location</code>
-следующего вида:
-</p> <blockquote class="example"><pre>
-	location / {
-	if (-f /nginx/maintenance.file){
-	return 500; }
-	}
-</pre></blockquote><p> 
-Данный блок создается для того, чтобы показать как nginx может отображать свои страницы с ошибками. 
-Есть несколько вариантов реализации. В рамках данного доклада, остановимся на такой. 
-Мы задаём условие, если в корневой папке есть файл <code>maintenance.file</code>, мы отображаем 500тую ошибку. 
-Например, для отображения тех работ на сервере, будет достаточно добавить данный файл, а после убрать. 
-С помощью <code>return</code> можно вернуть любую ошибку клиенту. Если мы хотим, вместо стандартной, 
-увидеть нашу страницу ошибки, нужно добавить еще один <code>location</code> с местоположением данной страницы и описание, 
-при каких ошибках мы будем ее показывать:
-</p>
-</p> <blockquote class="example"><pre>
-	error_page 500 /50x.html;
-        location = /50x.html {
-            root   html;
-			internal;
-        }
-		</pre>
-<p>Добавим еще блок <code>location</code>:
-</p> <blockquote class="example"><pre>location /html/images/ {
-    root /html/images;
-}
-</pre></blockquote><p> 
-Он будет давать совпадение с запросами, начинающимися с
-<code>/images/</code>.
-</p><p>
-Итоговая конфигурация блока <code>server</code> должна выглядеть
-следующим образом:
-</p> <blockquote class="example"><pre>server {
-	listen       80;
-    server_name  10.1.133.200;
-	
-    location / {
-	if (-f /nginx/maintenance.file){
-	return 500; }
-	}
+						<h1 id="query" class="title text-center"><span>jQuery</span></h1>
+						<h2 class="title text-center"><span>Основы jQuery</span></h2>
 
-    location /html/images/ {
-        root /images;
-    }
-	
-	error_page 500 /50x.html;
-        location = /50x.html {
-        root   html;
-		internal;
-}
-</pre></blockquote><p> 
-Это уже работающая конфигурация сервера, слушающего на стандартном порту 80
-и доступного на локальном компьютере по адресу
-<code>http://10.1.133.200</code>.
-В ответ на запросы, URI которых начинаются с <code>/images/</code>,
-сервер будет отправлять файлы из каталога <code>/images</code>.
-Например, на запрос
-<code>http://10.1.133.200/images/logo.jpg</code> nginx отправит
-в ответ файл <code>/images/logo.jpg</code>.
-Если же этот файл не существует, nginx отправит ответ, указывающий на
-ошибку 404.
-Запросы, URI которых не начинаются на <code>/images/</code>, будут
-отображены на каталог <code>/html</code>.
-Например, в результате запроса
-<code>http://10.1.133.200/some/example.html</code> в ответ будет
-отправлен файл <code>/html/some/example.html</code>.
-</p><p>
-Чтобы применить новую конфигурацию, запустите nginx, если он ещё не запущен,
-или отправьте сигнал <code>reload</code> главному процессу nginx,
-выполнив:
-</p> <blockquote class="example"><pre>nginx -s reload
-</pre></blockquote><p> 
-</p><p>
-</p> <blockquote class="note">
-В случае если что-то работает не как ожидалось, можно попытаться выяснить
-причину с помощью файлов <code>access.log</code> и <code>error.log</code>
-из каталога
-<code>/nginx/logs</code>.
-</blockquote><p> 			
-					</div>
-				</div>
-			</div>
-		</div>
-			<!-- section end -->
-		</div>
-		<!-- section end -->
 
-		<!-- section start -->
-		<!-- ================ -->
-	<!--	<div class="default-bg space">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<h1 class="text-center">10000+ Happy Clients!</h1>
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- section end -->
-
+		<!-- section end -->
 		<!-- footer start -->
 		<!-- ================ -->
-							<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 id="nva" class="title text-center"><span> A&D </span></h1>
-						</p><a name="static"></a><center><h4>Преимущества и недостатки nginx</h4></center><p>
-					
-<p>Преимущества nginx:</p>
-<ul>
-<li><a href="/wiki/Https" title="Https" class="mw-redirect">шифрование</a>, сжатие, поддержка многих сайтов на одном <a href="/wiki/IP-%D0%B0%D0%B4%D1%80%D0%B5%D1%81" title="IP-адрес">IP-адресе</a> и прочие возможности, доступные в большинстве веб-серверов;</li>
-<li><a href="/wiki/%D0%9C%D0%B5%D0%B6%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%BE%D1%81%D1%82%D1%8C" title="Межсистемность">межсистемность</a>, малый размер, простота конфигурации, масштабируемость;</li>
-<li>использование преимущества от асинхронной системы ввода-вывода, что на практике означает экономию ресурсов системы и выгодно сказывается в случае больших нагрузок</li>
-<li>встроенная устойчивость к многим видам DoS и <a href="/wiki/DDos" title="DDos" class="mw-redirect">DDos</a> атак.</li>
-</ul>
-<p>Недостатки nginx:</p>
-<ul>
-<li>встроенная поддержка PHP. Лечится подключением PHP через fastcgi. Неплохо работает решение php-fpm;</li>
-<li>нет встроенной поддержки технологии <a href="/w/index.php?title=Web-%D1%81%D0%BE%D0%BA%D0%B5%D1%82&amp;action=edit&amp;redlink=1" class="new" title="Web-сокет (страница не существует)">Web-сокет</a>, хотя при желании Web-сокет можно использовать (можно поставить перед nginx ещё один <a href="/w/index.php?title=Front-end&amp;action=edit&amp;redlink=1" class="new" title="Front-end (страница не существует)">front-end</a>, поддерживающий Web-сокет или использовать расширение udp_proxy для nginx);</li>
-<li>появился позже Apache, из-за чего не признается многими <a href="/wiki/%D0%9E%D0%BB%D0%B4%D1%84%D0%B0%D0%B3" title="Олдфаг">олдфагами</a>.</li>
-</ul>
-<p>В <a href="/wiki/Apache" title="Apache">Apache</a> по умолчанию тратится по одному процессу (или потоку выполнения) операционной системы на каждый запрос. Или же заранее запускается некоторое количество процессов-рабочих, обрабатывающих запросы. Число запросов, по которым одновременно отдается или принимается информация, ограничено количеством этих рабочих. Так как каждый рабочий тратит ресурсы системы, их число обычно невелико.</p>
-<p>Асинхронный ввод-вывод позволяет nginx экономить на этих запросах, в которых происходит передача информации. 10 000 клиентов, скачивающих файл на очень медленной скорости не страшны для nginx, но способны повергнуть в ужас Apache. Соответственно, nginx идеально подходит для отдачи статического контента. Конечно, для Apache есть решения, позволяющие справляться с большим числом одновременных запросов, но их ещё надо прикручивать, а в nginx это есть изначально.</p>
-<p>Так или иначе, но nginx используется на значительном количестве веб-серверов по всему миру. Нередко можно встретить конфигацию nginx+Apache, когда nginx используется в качестве сервера-балансировщика, обратно проксирующего запросы на один или несколько Apache-серверов. nginx при этом имеет дело с дикой стихией запросов из внешнего мира, а Apache уже обрабатывает сами запросы.</p>
+						<h1 id="bootstrap" class="title text-center"><span>Bootstrap</span></h1>
+						<h2 class="title text-center"><span>Основы Bootstrap</span></h2>
+
+
+
+
 					</div>
 				</div>
 			</div>
 		</div>
 			<!-- .footer end -->
-
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="tags" class="title text-center"><span>Site elements</span></h1>
+						<h2 class="title text-center"><span>Элементы интерфейса сайта</span></h2>
+						<p><span style="font-weight: 400;">Элементы интерфейса, их еще называют элементы управления, которые используются при разработке сайта и при его использовании. Рассказываем, что есть что на самом деле.&nbsp;</span></p>
+						<p><span style="font-weight: 400;"><b><big>Button</big></b> — элемент, при нажатии на который происходит какое-то действие на сайте. </span></p>
+						<p><img class="alignnone wp-image-1500 size-full" src="https://borodaboroda.com/wp-content/uploads/knopka-3x.png" alt="Элементы интерфейса" width="149" height="45"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Radiobutton</big></b> — позволяет пользователю выбрать одну опцию.</span></p>
+						<p><img class="alignnone wp-image-1499 " src="https://borodaboroda.com/wp-content/uploads/radiobutton-3x.png" alt="Элементы интерфейса" width="75" height="67"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Checkbox</big></b> — позволяет выбрать несколько опций.</span></p>
+						<p><img class="alignnone wp-image-1498 " src="https://borodaboroda.com/wp-content/uploads/Checkbox-3x.png" alt="Элементы интерфейса" width="120" height="98"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Select</big></b> — позволяет пользователю выбрать одну опцию из выпадающего списка.</span></p>
+						<p><img class="alignnone wp-image-1497 " src="https://borodaboroda.com/wp-content/uploads/Select-3x.png" alt="Элементы интерфейса" width="201" height="104"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Accordeon</big></b> — элемент интерфейса состоящий из заголовков и скрываемого и открываемого контента.&nbsp;</span></p>
+						<p><img class="alignnone wp-image-1502" src="https://borodaboroda.com/wp-content/uploads/accordion-3x.png" alt="Элементы интерфейса" width="162" height="131"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Слайдер</big></b> — переключатель изображений (или другого контента) работающий автоматически или вручную.</span></p>
+						<p><img class="alignnone wp-image-1496 size-full" src="https://borodaboroda.com/wp-content/uploads/Slider-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Контент</big></b> — текст, изображения, видео, то есть наполнение сайта.</span></p>
+						<p><img class="alignnone wp-image-1495 size-full" src="https://borodaboroda.com/wp-content/uploads/kontent-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Popup</big></b> — небольшое всплывающее окно в углу экрана.</span></p>
+						<p><img class="alignnone wp-image-1494 size-full" src="https://borodaboroda.com/wp-content/uploads/Pop-up-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Модальное окно</big></b> — разновидность всплывающего окна. Оно появляется на большую часть экрана и блокирует работу с остальным сайтом. Это может быть форма обратной связи, или просмотр фотографий в вк и фейсбуке.</span></p>
+						<p><img class="alignnone wp-image-1501 size-full" src="https://borodaboroda.com/wp-content/uploads/Resurs-36-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Блок (Экран)</big></b> — смысловой элемент включающий в себ</span><span style="font-weight: 400;">я информацию только об одной сущности. Обычно блок начинается с заголовка и отделен от следующего каким-либо визуальным решением, цветом, линией, тенью.</span></p>
+						<p><img class="alignnone wp-image-1493 size-full" src="https://borodaboroda.com/wp-content/uploads/Block-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Раздел</big></b> — страница сайта. Тут все просто.</span></p>
+						<p><img class="alignnone wp-image-1492 size-full" src="https://borodaboroda.com/wp-content/uploads/Razdel-3x.png" alt="Элементы интерфейса" width="104" height="101"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Шапка (хеддер / header)</big></b> — самая верхняя часть сайта. Обычно в ней расположены логотип, меню и контактная информация. Шапка чаще всего бывает закрепленной, т.е. она перемещается вместе с перемещением пользователя по странице.</span></p>
+						<p><img class="alignnone wp-image-1491 size-full" src="https://borodaboroda.com/wp-content/uploads/Header-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Подвал (футер / footer)</big></b> — самая нижняя часть сайта. Чаще всего в ней расположена карта сайта, контактные данные, быстрые ссылки на популярные разделы, копирайт, политика конфиденциальности и ссылка на разработчика сайта.</span></p>
+						<p><img class="alignnone wp-image-1490 size-full" src="https://borodaboroda.com/wp-content/uploads/Footer-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Галерея</big></b> — набор из нескольких изображений.</span></p>
+						<p><img class="alignnone wp-image-1489 size-full" src="https://borodaboroda.com/wp-content/uploads/Gallery-3x.png" alt="Элементы интерфейса" width="132" height="132"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Превью (preview)</big></b> — изображение или часть другого контента, уменьшенная в размере. При нажатии на превью открывается исходный размер контента, отображаемого в превью.</span></p>
+						<p><img class="alignnone wp-image-1488 size-full" src="https://borodaboroda.com/wp-content/uploads/Preview-3x.png" alt="Элементы интерфейса" width="99" height="135"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Бордер</big></b> — обводка элемента. Бывает solid (цельной), dashed (линиями) и dotted (точками).</span></p>
+						<p><img class="alignnone wp-image-1487 size-full" src="https://borodaboroda.com/wp-content/uploads/Border-3x.png" alt="Элементы интерфейса" width="99" height="127"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Тултип (tooltip)</big></b> — подсказка, всплывающая при наведении на элемент.</span></p>
+						<p><img class="alignnone wp-image-1486 size-full" src="https://borodaboroda.com/wp-content/uploads/tooltip-3x.png" alt="Элементы интерфейса" width="179" height="113"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Курсор Поинтер (Pointer)</big></b> — тип курсора в виде руки с вытянутым указательным пальцем. Обычно появляется при наведении на ссылку.</span></p>
+						<p><img class="alignnone wp-image-1456 size-full" src="https://borodaboroda.com/wp-content/uploads/Pointer-2x.png" alt="Элементы интерфейса" width="32" height="38"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Курсор Текст (Text)</big></b> — тип курсора, стандартный для редактирования текста.</span></p>
+						<p><img class="alignnone wp-image-1457 size-full" src="https://borodaboroda.com/wp-content/uploads/Text-2x.png" alt="Элементы интерфейса" width="24" height="37"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Навигация</big></b> — любой вид элементов позволяющий перенаправлять пользователя на похожий элемент будь то страница, другая картинка, следующий текст и так далее.</span></p>
+						<p><img class="alignnone wp-image-1458 size-full" src="https://borodaboroda.com/wp-content/uploads/Navigation-3x.png" alt="Элементы интерфейса" width="77" height="76"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Пагинация</big></b> — нумерация страниц, обычно отображенная как навигация в конце страницы.</span></p>
+						<p><img class="alignnone size-full wp-image-1511" src="https://borodaboroda.com/wp-content/uploads/Paginacia-2x.png" alt="" width="124" height="28"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Списки</big></b> — в веб интерфейсах присутствуют нумерованные списки (цифрами), маркированные списки (точки, квадратики, кружки, черточки) и списки определений.</span></p>
+						<p><img class="alignnone wp-image-1506 size-full" src="https://borodaboroda.com/wp-content/uploads/Spisok-4x.png" alt="Элементы интерфейса" width="148" height="130"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Стрелочки</big></b> — вид навигации.</span></p>
+						<p><img class="alignnone wp-image-1463 size-full" src="https://borodaboroda.com/wp-content/uploads/arrow-3x.png" alt="Элементы интерфейса" width="89" height="32"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Поисковая строка</big></b> — строка для ввода поискового запроса.</span></p>
+						<p><img class="alignnone wp-image-1464 size-full" src="https://borodaboroda.com/wp-content/uploads/Poisk-3x.png" alt="Элементы интерфейса" width="187" height="41"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Плеер</big></b> — элемент воспроизводящий аудио и видеофайлы.</span></p>
+						<p><img class="alignnone wp-image-1465 size-full" src="https://borodaboroda.com/wp-content/uploads/Player-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Ползунок</big></b> —</span><span style="font-weight: 400;"> предназначен для ввода чисел в указанном диапазоне.</span></p>
+						<p><img class="alignnone wp-image-1466 size-full" src="https://borodaboroda.com/wp-content/uploads/Polzunok-3x.png" alt="Элементы интерфейса" width="238" height="58"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Текстовое поле</big></b> — поле для ввода текстовых значений.</span></p>
+						<p><img class="alignnone wp-image-1467 size-full" src="https://borodaboroda.com/wp-content/uploads/Text-space-3x.png" alt="Элементы интерфейса" width="187" height="41"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Поле пароля</big></b> — поле для ввода пароля. Автоматически скрывает символы, заменяя их на точки.</span></p>
+						<p><img class="alignnone wp-image-1468 size-full" src="https://borodaboroda.com/wp-content/uploads/Password-3x.png" alt="Элементы интерфейса" width="187" height="41"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Маска</big></b> — </span><span style="font-weight: 400;">это значения, указывающие формат допустимых значений входных&nbsp;</span><span style="font-weight: 400;">данных в поле.&nbsp;</span></p>
+						<p><img class="alignnone wp-image-1469 size-full" src="https://borodaboroda.com/wp-content/uploads/Mask-3x.png" alt="Элементы интерфейса" width="187" height="41"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Ссылка</big></b> — элемент интерфейса перенаправляющий вас по адресу, указанному в нем.</span></p>
+						<p><img class="alignnone wp-image-1507 size-full" src="https://borodaboroda.com/wp-content/uploads/link-4x.png" alt="Элементы интерфейса" width="229" height="45"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Якорь</big></b> — элемент интерфейса перенаправляющий вас по адресу и к конкретному элементу, указанному в нем.</span></p>
+						<p><img class="alignnone wp-image-1471 size-full" src="https://borodaboroda.com/wp-content/uploads/yakor-3x.png" alt="Элементы интерфейса" width="150" height="95"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Вкладки (табы)</big></b> — элемент интерфейса, так же как и аккордеон, состоит из заголовка и скрытого контента, на который можно попасть при обращении к заголовку.</span></p>
+						<p><img class="alignnone wp-image-1482 size-full" src="https://borodaboroda.com/wp-content/uploads/Tabs-3x.png" alt="Элементы интерфейса" width="150" height="97"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Строка загрузки</big></b> — элемент, показывающий степень загрузки контента или исполняемой функции.</span></p>
+						<p><img class="alignnone wp-image-1472 size-full" src="https://borodaboroda.com/wp-content/uploads/stroka-zagruzki-3x.png" alt="Элементы интерфейса" width="171" height="25"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Переключатель (switch)</big></b> — элемент интерфейса, который позволяет выбрать одно из состояний, чаще всего вкл/выкл.</span></p>
+						<p><img class="alignnone wp-image-1473 size-full" src="https://borodaboroda.com/wp-content/uploads/switch-3x.png" alt="Элементы интерфейса" width="92" height="24"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Алерт окно</big></b> — всплывающее окно, блокирующее взаимодействие пользователя не только с элементами на данной страницы, но и в целом со всем браузером.</span></p>
+						<p><img class="alignnone wp-image-1474 size-full" src="https://borodaboroda.com/wp-content/uploads/Alert-3x.png" alt="Элементы интерфейса" width="147" height="93"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Прелоадер (Preloader)</big></b> — анимированный элемент, воспроизводящийся в процессе загрузки сайта, видео, изображений и другого контента.</span></p>
+						<p><img class="alignnone wp-image-1475 size-full" src="https://borodaboroda.com/wp-content/uploads/Preloader-3x.png" alt="Элементы интерфейса" width="97" height="92"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Рейтинг (Rating bar)</big></b> — элемент интерфейса показывающий среднюю оценку.</span></p>
+						<p><img class="alignnone wp-image-1477 size-full" src="https://borodaboroda.com/wp-content/uploads/Rating-bar-2x.png" alt="Элементы интерфейса" width="131" height="40"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Теги</big></b> — элемент чаще всего располагающийся под контентом. Показывает принадлежность статьи, товара и пр. к конкретной категории. Зачастую при нажатии на&nbsp;</span><span style="font-weight: 400;">тег, вы попадете на страницу со всем контентом, у которого есть такой тэг</span></p>
+						<p><img class="alignnone wp-image-1483 size-full" src="https://borodaboroda.com/wp-content/uploads/Tags-3x-1.png" alt="Элементы интерфейса" width="129" height="135"></p>
+						<br>
+						<p><span style="font-weight: 400;"><b><big>Хлебные крошки</big></b> — навигационная цепочка — элемент интерфейса, показывающий путь от начала до того уровня, где в данный момент находится пользователь.</span></p>
+						<p><img class="alignnone wp-image-1481 size-full" src="https://borodaboroda.com/wp-content/uploads/kroshki-4x.png" alt="Элементы интерфейса" width="181" height="16"></p>
+					</div>
+				</div>
+			</div>
+		</div>
 			<!-- .subfooter start -->
 			<!-- ================ -->
 			<div class="subfooter">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<p class="text-center">16.03.2020 by <a target="_blank" href="">Sergiy Chernogor</a>.</p>
+							<p class="text-center">11.2021 by <a target="_blank" href="">Kseniya Chernogor</a>.</p>
 						</div>
 					</div>
 				</div>
