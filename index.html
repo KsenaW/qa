@@ -35,6 +35,9 @@
 		<!-- Custom css --> 
 		<link href="css/custom.css" rel="stylesheet">
 
+		<!-- jquery -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+
 		<SCRIPT  LANGUAGE="JavaScript">
       <!--
     function test()
@@ -120,6 +123,7 @@
 												<li class="active"><a href="#html">HTML</a></li>
 												<li><a href="#css">CSS</a></li>
 												<li><a href="#script">JavaScript</a></li>
+												<li><a href="#jquery">jQuery</a></li>
 												<li><a href="#bootstrap">Bootstrap</a></li>
 												<li><a href="#tags">Site elements</a></li>
 											</ul>
@@ -371,7 +375,51 @@
 		</div>
 			<!-- section start -->
 			<!-- ================ -->
-		<!-- footer start -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="jquery" class="title text-center"><span>jQuery</span></h1>
+						<h2 class="title text-center"><span>Что такое jQuery</span></h2>
+						<p>jQuery это популярная библиотека JavaScript. Она была создана Джоном Резигом в 2006 году с целью облегчить разработчикам использование JavaScript на веб-сайтах. Это не отдельный язык программирования и работает в сочетании с JavaScript.</p>
+						<p>Написание кода может стать утомительным, особенно если в него включено много строк. jQuery сжимает несколько строк кода в одну функцию, поэтому вам не нужно переписывать целые блоки кода для выполнения одной задачи.</p>
+						<h3>Как же все-таки работает jQuery?</h3><br>
+						Для начала Вам понадобиться сам фреймворк, его вы сможете скачать с <a href="http://jquery.com/">домашней страницы проекта</a>, затем проинициализировать:<br>
+						<br>
+						<pre>&lt;head&gt;
+&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</pre><br>
+						А основные моменты поможет понять следующая диаграмма:<br>
+						<img data-src="https://habrastorage.org/getpro/habr/post_images/6cf/621/726/6cf6217263d8717f20f8d163330c5991.gif" src="https://habrastorage.org/getpro/habr/post_images/6cf/621/726/6cf6217263d8717f20f8d163330c5991.gif"> &nbsp;<br>
+						<br>
+						<h3>Как получить элемент с помощью jQuery?</h3><br>
+						Для того чтобы понимать как работает селектор Вам все-же необходимы базовые знания CSS, т.к. именно от принципов CSS отталкивает селектор jQuery:<br>
+						<ul>
+							<li>$("#header") — получение элемента с id=«header»</li>
+							<li>$(«h3») — получить все &lt;h3&gt; элементы</li>
+							<li>$(«div#content .photo») — получить все элементы с классом =«photo» которые находятся в элементе div с id=«content»</li>
+							<li>$(«ul li») — получить все &lt;li&gt; элементы из списка &lt;ul&gt;</li>
+							<li>$(«ul li:first») — получить только первый элемент &lt;li&gt; из списка &lt;ul&gt;</li>
+						</ul><br>
+						<br>
+						<h3>Выдвижная панель</h3><br>
+						Простой пример — слайд-панель, она будет двигаться вверх/вниз по клику на ссылке (см. <a href="simple-slide-panel.html">пример</a>)<br>
+						<img data-src="images/15f2b32b0d57bb338a3f59d156702f21.gif" src="images/15f2b32b0d57bb338a3f59d156702f21.gif"><br>
+						Реализуется это следующим образом, по клику на ссылку, у нас будет переключаться её класс (между «active» и «btn-slide»), а панелька с id=«panel» будет выдвигаться/прятаться. (класс «active» изменяет позицию фонового изображения.<br>
+						<br>
+						<pre>$(document).ready(function(){
+    $(".btn-slide").click(function(){
+        $("#panel").slideToggle("slow");
+        $(this).toggleClass("active");
+    });
+});
+</pre><br>
+						&nbsp;<br>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- ================ -->
 		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
 			<div class="container">
